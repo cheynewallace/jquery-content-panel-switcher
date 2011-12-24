@@ -1,0 +1,126 @@
+/****** General ******/
+* {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body { 
+  height: 100%;
+  min-width: 1000px;
+  max-height: 1200px;
+  max-width: 1920px;
+}
+
+a, a:visited {
+  color:  #bbbbbb;
+}
+
+.center {
+  text-align: center;
+  margin-auto;
+}
+
+.wide {
+  width: 75%;
+}
+
+.mid {
+  width:  95%;
+  display:  inline-block;
+}
+
+.margin_auto {
+  margin: auto;
+}
+
+/***** Formatting *****/
+body {
+  font-family: 'Century Gothic', helvetica, verdana, arial;
+  letter-spacing: 1px;
+  line-height: 25px;
+  background-color: #444444;
+  color: #bbbbbb;
+}
+
+table {
+  width: 95%;
+  margin: auto;
+}
+
+h2 {
+    letter-spacing: 1px;
+    line-height: 35px;
+    font-size: 30px;
+    margin: 2px 0px 10px 0px;
+}
+
+i {
+	
+  color: #fa9c08;
+}
+
+li {
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
+.info {
+  color: #e7510e;
+  font-size: 80%;
+}
+
+
+/****** Layout *******/
+#switcher-demo-panel {
+  margin-top: 30px;
+  margin-left: 29px;
+  margin-right: 29px;
+  padding-bottom: 30px;
+}
+
+#switcher-panel {
+  margin-top: 30px;
+  margin-left: 29px;
+  margin-right: 29px;
+  height: 400px;
+}
+
+#switcher-panel2 {
+  margin-top: 30px;
+  margin-left: 29px;
+  margin-right: 29px;
+  height: 400px;
+}
+
+.nav_buttons {
+  position: relative;
+  top: 13px;
+  left: 15px;
+  height: 30px;
+}
+
+.nav_buttons a {
+  margin: 0px 10px;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  top: 0px;
+  background: transparent url(../images/navbg.png) repeat-x bottom left;
+  color: #888;
+}
+
+.block {
+  background: transparent url(../images/block_bg.png) repeat top left;
+ -moz-border-radius: 20px;
+  azimuth-webkit-border-radius: 20px;
+ -khtml-border-radius: 20px;
+  border-radius: 20px;
+  min-height: 400px;
+  height: 400px;
+  margin-top: 20px;
+}
+

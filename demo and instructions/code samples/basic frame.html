@@ -1,0 +1,25 @@
+<!-- This Page Is Not Meant To Display Properly, All Formatting Has Been Removed To Eliminate Confusion, This Is Purely To Help Understand Usage -->
+
+<link rel="stylesheet" type="text/css" media="screen" href="style/jquery.content-panel-switcher.css" /> 
+<!-- JS --> 
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/jquery.content-panel-switcher.js'></script> 
+
+<!-- This initializes the content panel switcher, the parameters set the speed of the transition and the panel ID to display the content in --> 
+<script type='text/javascript'>
+$(document).ready(function() {
+	jcps.fader(300, '#switcher-panel');
+});
+</script>  
+
+<!-- These are the switcher buttons -->
+<a id="content1" class="switcher">Content 1</a> 
+<a id="content2" class="switcher">Content 2</a> 
+
+<!-- This is the panel where your content will appear -->
+<div id="switcher-panel"></div>
+
+<!-- These are your actual content blocks, they're hidden from the end user -->
+<div id="content1-content" class="switcher-content show">This is content 1</div>
+<div id="content2-content" class="switcher-content">This is content 2</div>
+

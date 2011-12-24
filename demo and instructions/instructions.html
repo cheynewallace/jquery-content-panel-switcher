@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"> 
+<head> 
+<!-- jQuery Content Panel Switcher - By Cheyne Wallace --> 
+<title>jQuery Content Panel Switcher - Instructions</title>
+<!-- Style --> 
+<link rel="stylesheet" type="text/css" media="screen" href="style/demopage.css" /> 
+<link rel="stylesheet" type="text/css" media="screen" href="style/jquery.content-panel-switcher.css" /> 
+<!-- JS --> 
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/jquery.content-panel-switcher.js'></script>  
+<script type='text/javascript'>
+$(document).ready(function() {
+	jcps.fader(300, '#switcher-demo-panel');
+});
+</script>  
+</head>
+<body>
+<div class="block wide margin_auto" style="height: auto">
+	<div class="header">
+		<div class="nav_buttons"> 
+			<a id="info" class="switcher">Info</a> 
+			<a id="basics" class="switcher">Basic Use</a> 
+			<a id="multi" class="switcher">Multiple Panels</a> 
+			<a id="tips" class="switcher">Tips</a> 
+		</div> 
+	</div>
+		<div id="switcher-demo-panel"></div>
+		<div id="info-content" class="switcher-content show">
+		<h2>Info</h2>
+		The jQuery Content Panel Switcher is a simple, very lightweight jQuery plugin that allows smooth transitioning of content in and out of panels located anywhere on the page. You can have single or multiple content switching panels on a single page<br/>
+		Content panels can be either span or div elements, and the buttons used to switch the content can be just about anything, so long as they have the right clases assigned.<br/><br/>
+		Setup is very simple, just create your content, create the panel you wish to switch the content in and out of, create your buttons then assign the appropriate classes and ID's. <br/>
+		Unlike tabbed or folding style content swicthers, the panels and swicther buttons can be located anywhere on the page, any size or shape.
+		<br/>
+		There are two types of transition effects you can pick from, a fader and a slider.
+		<br/><br/>
+		<h3>Extremely Lightweight</h3>
+		The jQuery Content Panel Switcher is extemely lightweight. (4Kb), it doesnt attempt to perform every action under the sun like some other plugins, its clean and simply to the point, it switches content around with a few additional features and thats it. Its very lean.<br/><br/>
+		
+		</div>
+		<div id="basics-content" class="switcher-content">
+		<h2>Basic Use</h2>
+		<b><a href="single demo.html">See A Demo Here</a></b><br/>
+		The file <i>basic frame.html</i> located in the <i>code samples</i> directory contains the basic code to help understand how to use this plugin. Most of the standard HTML markup and styling has been removed to help reduce confusion. <br/><br/>
+		<h3>Components</h3>
+		The most basic use is a single panel, like what this page is. There are 4 main components to a simple page like this, those are:
+		<ul>
+			<li>The switcher buttons, typically a simple &lt;a&gt; tag, with a unique ID of your choice, and the <i>switcher</i> class applied.
+			<br/>Eg <i>&lt;a id="home" class="switcher"&gt;home&lt;a&gt;</i></li>
+			<li>The content its self, contained in a DIV or a SPAN, with the <i>switcher-content</i> class applied. This class will hide these elements. These must also have a unique ID which matches the name of the switcher buttons ID, with <i>-content</i> added after<br/>
+			Eg <i>&lt;div id="home-content" class="switcher-content"&gt;Some content here&lt;div&gt;</i></li>
+			<li>The the panel you wish you have your content appear in, typically in a central position on the page, like the one your reading now, this must have a unique ID, which you can choose<br/>
+			Eg <i>&lt;div id="switcher-content" &gt;&lt;div&gt;</i></li>
+			<li>The initialization function in the header that tells the plugin what content panel you wish to use, and what speed you wish it to transition at. This must be wrapped in a jQuery $(document).ready block<br/>
+			Eg <i>jcps.fader(300, '#switcher-demo-panel');</i></li>
+		</ul>
+		<br/>
+		<h3>Code Sample</h3>
+		When it all comes together it looks like:
+		<p>
+		<br />
+		<i>
+		<span class="info">Your head section, embedding JS and CSS files</span><br/>
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;style/jquery.content-panel-switcher.css&quot; /&gt; <br />
+		&lt;script type='text/javascript' src='js/jquery.js'&gt;&lt;/script&gt;<br />
+		&lt;script type='text/javascript' src='js/jquery.content-panel-switcher.js'&gt;&lt;/script&gt; <br />
+		<br />
+		<span class="info">Initialize the Content Switcher, specify the speed (in milliseconds) of the transition and the panel ID you wish the content to appear in</span><br/>
+		&lt;script type='text/javascript'&gt;<br />
+		$(document).ready(function() {<br />
+			jcps.fader(300, '#switcher-panel');<br />
+		});<br />
+		&lt;/script&gt;  <br />
+		<br />
+		<span class="info">The switcher buttons, basic anchor tags, with the switcher class</span><br/>
+		&lt;a id=&quot;content1&quot; class=&quot;switcher&quot;&gt;Content 1&lt;/a&gt; <br />
+		&lt;a id=&quot;content2&quot; class=&quot;switcher&quot;&gt;Content 2&lt;/a&gt; <br />
+		<br />
+		<span class="info">The panel you wish to use to display the content</span><br/>
+		&lt;div id=&quot;switcher-panel&quot;&gt;&lt;/div&gt;<br />
+		<br />
+		<span class="info">The actual content you want to switch in and out of the panel, this is hidden</span><br/>
+		&lt;div id=&quot;content1-content&quot; class=&quot;switcher-content show&quot;&gt;This is content 1&lt;/div&gt;<br />
+		&lt;div id=&quot;content2-content&quot; class=&quot;switcher-content&quot;&gt;This is content 2&lt;/div&gt;
+		</i>
+		</p>
+		<br/>
+		<h3>But Wait .. </h3>
+		What is that extra <i>show</i> class on the content1-content div? If you wish to have some content display as the default content in the panel when the page loads, simply add the <i>show</i> class to the end of the div class list.  This is purely optional, but not everyone wants a blank page to load.
+		<br/><br/>
+		<h3>Additional Transition Types</h3>
+		You might notice the initialization string says <i>jcps.fader</i>, this fades the content in and out, but if you would prefer to slide the content in and out change this string to say <i>jcps.slider</i> instead
+		</div>
+		<div id="multi-content" class="switcher-content">
+		<h2>Multiple Panels</h2>
+		<b><a href="multiple demo.html">See A Demo Here</a></b><br/>
+		Using multiple panels on a single page is also possible, its very similiar to using a single panel although you need to specify an additional class and parameter on the initialization string. Along with one additional initialization string per panel your using<br/>
+		The file <i>multiple frame.html</i> located in <i>code samples</i> directory, contains the basic code to help understand how to use this plugin with multiple panels. Most of the standard HTML markup and styling has been removed to help reduce confusion. <br/><br/>
+		<h3>Components</h3>
+		Setup for a multi panel switcher is similiar to the basic 1 panel switcher, how ever an additional <i>set</i> class must be assigned to the buttons and the hidden content blocks.<br/>
+		Consider this set class as identifying which panel we want the buttons and content blocks to target.<br/>
+		Simply put, when the page loads, we specify which panels we want to use on the page,  and we assign the set name we want to assign to the panel.  Then it's simply a matter of adding the set class name to the buttons and content blocks.<br/><br/>
+		If your confused, just read the code sample in either the multiple frame.html file or the code snip below and it should clear things up.<br/><br/>
+		<h3>Code Sample</h3>
+		<i>
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;style/jquery.content-panel-switcher.css&quot; /&gt; <br/>
+		&lt;script type=&#39;text/javascript&#39; src=&#39;js/jquery.js&#39;&gt;&lt;/script&gt; <br/>
+		&lt;script type=&#39;text/javascript&#39; src=&#39;js/jquery.content-panel-switcher.js&#39;&gt;&lt;/script&gt; <br/>
+		 <br/>
+		<span class="info">Note the second initialization string, and the additional parameter specifying the set name (in class format with the . in front)</span><br/>
+		&lt;script type=&#39;text/javascript&#39;&gt;<br/>
+		$(document).ready(function() {<br/>
+			jcps.fader(300, &#39;#switcher-panel&#39;, &#39;.set1&#39;);<br/>
+			jcps.slider(500, &#39;#switcher-panel2&#39;, &#39;.set2&#39;);<br/>
+		});<br/>
+		&lt;/script&gt;  <br/>
+		<br/>
+		<span class="info">These are the first set of switcher buttons</span><br/>
+		&lt;a id=&quot;content1&quot; class=&quot;switcher set1&quot;&gt;Content 1&lt;/a&gt; <br/>
+		&lt;a id=&quot;content2&quot; class=&quot;switcher set1&quot;&gt;Content 2&lt;/a&gt; <br/>
+		<br/>
+		<span class="info">These are the second set of switcher buttons</span><br/>
+		&lt;a id=&quot;content2&quot; class=&quot;switcher set2&quot;&gt;Content 3&lt;/a&gt; <br/>
+		&lt;a id=&quot;content3&quot; class=&quot;switcher set2&quot;&gt;Content 4&lt;/a&gt; <br/>
+		<br/>
+		<span class="info">These are the panels where your content will appear</span><br/>
+		&lt;div id=&quot;switcher-panel&quot;&gt;&lt;/div&gt;<br/>
+		&lt;div id=&quot;switcher-panel2&quot;&gt;&lt;/div&gt;<br/>
+		<br/>
+		<span class="info">These are your actual content blocks, they&#39;re hidden from the end user</span><br/>
+		&lt;div id=&quot;content1-content&quot; class=&quot;switcher-content set1 show&quot;&gt;This is content 1&lt;/div&gt;<br/>
+		&lt;div id=&quot;content2-content&quot; class=&quot;switcher-content set1&quot;&gt;This is content 2&lt;/div&gt;<br/>
+		<br/>
+		<span class="info">These are your actual content blocks, they&#39;re hidden from the end user</span><br/>
+		&lt;div id=&quot;content1-content&quot; class=&quot;switcher-content set2 show&quot;&gt;This is content 3&lt;/div&gt;<br/>
+		&lt;div id=&quot;content2-content&quot; class=&quot;switcher-content set2&quot;&gt;This is content 4&lt;/div&gt;<br/>
+		</i>
+		<br/>
+		<h3>But Wait .. </h3>
+		What is that extra <i>show</i> class on the content1-content div? If you wish to have some content display as the default content in the panel when the page loads, simply add the <i>show</i> class to the end of the div class list.  This is purely optional, but not everyone wants a blank page to load.
+		<br/><br/>
+		<h3>Additional Transition Types</h3>
+		You might notice the initialization string says <i>jcps.fader</i>, this fades the content in and out, but if you would prefer to slide the content in and out change this string to say <i>jcps.slider</i> instead
+		</div>
+		<div id="tips-content" class="switcher-content">
+		<h2>Tips</h2>
+		<h3>Changing Transition Types</h3>
+		You might notice the initialization string says <i>jcps.fader</i>, this fades the content in and out, but if you would prefer to slide the content in and out change this string to say <i>jcps.slider</i> instead
+		<br/><br/>
+		<h3>Setting Default Content</h3>
+		If you wish to have some content display as the default content in the panel when the page loads, simply add the <i>show</i> class to the end of the div class list.  This is purely optional, but not everyone wants a blank page to load. <br/><br/>
+		<h3>Eliminating Strange Resizing Issue</h3>
+		Depending on your CSS, and layout, using the Slider transition may cause the panel to jump in size then snap back like an elastic band. To prevent this, give the containing element or the panel a fixed height, this will prevent the panel causing any strange resizing issues.<br/><br/>
+		</div>
+</div>
+</body>
+</html>
