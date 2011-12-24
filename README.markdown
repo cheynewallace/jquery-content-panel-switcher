@@ -1,3 +1,9 @@
+<h3>
+<a name="Single_Panel_Demo_|_Multiple_Panel_Demo"></a>
+<a href="http://cheynewallace.com/demo/jcps/single_demo.html" rel="nofollow">Single Panel Demo</a> | <a href="http://cheynewallace.com/demo/jcps/multiple_demo.html" rel="nofollow">Multiple Panel Demo</a>
+<a href="#Single_Panel_Demo_|_Multiple_Panel_Demo" class="section_anchor"></a>
+</h3>
+
 <h1>jQuery Content Panel Switcher</h1>
 <p>The jQuery Content Panel Switcher is a simple, very lightweight jQuery plugin that allows smooth transitioning of 
 content in and out of panels located anywhere on the page. You can have single or multiple content switching panels 
